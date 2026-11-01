@@ -887,10 +887,10 @@ class GameView(context: Context) : SurfaceView(context), SurfaceHolder.Callback,
         c.drawRoundRect(dst, 8f * scale, 8f * scale, paint)
         val cx0 = padRect.left + padRect.width() * 0.31f
         val cy0 = padRect.top + padRect.height() * 0.5f
-        val ar = padRect.width() * 0.115f
+        val ar = padRect.height() * 0.30f
         val up = tU; val dn = tD; val lf = tL; val rt = tR
         fun dz(x0: Float, y0: Float, x1: Float, y1: Float, pressed: Boolean) {
-            paint.color = if (pressed) 0xFF777788.toInt() else 0xFF111116.toInt()
+            paint.color = if (pressed) 0xFF9A9AC8.toInt() else 0xFF3C3C48.toInt()
             dst.set(x0, y0, x1, y1)
             c.drawRoundRect(dst, 3f * scale, 3f * scale, paint)
         }
@@ -908,9 +908,9 @@ class GameView(context: Context) : SurfaceView(context), SurfaceHolder.Callback,
         val bxb = padRect.left + padRect.width() * 0.88f
         val byc = padRect.top + padRect.height() * 0.42f
         paint.color = 0xFF8B1A1A.toInt()
-        dst.set(bxa - ar * 0.8f, byc - ar * 0.8f, bxa + ar * 0.8f, byc + ar * 0.8f)
+        dst.set(bxa - ar * 0.85f, byc - ar * 0.85f, bxa + ar * 0.85f, byc + ar * 0.85f)
         c.drawOval(dst, paint)
-        dst.set(bxb - ar * 0.8f, byc - ar * 0.8f, bxb + ar * 0.8f, byc + ar * 0.8f)
+        dst.set(bxb - ar * 0.85f, byc - ar * 0.85f, bxb + ar * 0.85f, byc + ar * 0.85f)
         c.drawOval(dst, paint)
         textPaint.textSize = 10f * scale
         textPaint.color = 0xFFDDDDDD.toInt()
